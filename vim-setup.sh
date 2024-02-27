@@ -17,7 +17,7 @@ install_ycm() {
     fi
 
     cd ~/.vim/plugged/YouCompleteMe
-    python3 install.py 
+    python3 install.py --clangd-completer
 }
 
 # install vim-gtk (assumes vim9 already on system)
