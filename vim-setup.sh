@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # get os (mac or linux supported)
-OS = $(uname)
+OS=$(uname)
 
 # install ycm dependencies based on OS
 install_ycm() {
-    if ["$OS" == "Linux" ]; then
+    if [ "$OS" == "Linux" ]; then
         sudo apt-get update
         sudo apt-get install build-essential cmake python3-dev -y
     elif [ "$OS" == "Darwin" ]; then
@@ -16,7 +16,7 @@ install_ycm() {
         exit 1
     fi
 
-    cd ~/.vim/bundle/YouCompleteMe
+    cd ~/.vim/plugged/YouCompleteMe
     python3 install.py 
 }
 
