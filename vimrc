@@ -74,3 +74,17 @@ set backspace=indent,eol,start
 set cursorline
 set cursorcolumn
 
+" clear status line when vimrc is reloaded
+set statusline=
+        
+" status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+        
+" divider to separate left from right
+set statusline+=%=
+        
+" status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+        
+" show status on second to last line
+set laststatus=2
